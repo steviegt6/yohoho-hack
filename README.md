@@ -1,2 +1,2 @@
 # yohoho-hack
- Cheats for http://yohoho.io
+ Cheats for http://yohoho.io/

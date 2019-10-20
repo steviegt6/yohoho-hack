@@ -1,0 +1,305 @@
+#doorbell-button {
+    position: fixed;
+    visibility: visible!important;
+    cursor: pointer;
+    width: auto;
+    border: 0;
+    font-size: 14px;
+    background: #2C2C2C;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin: 0;
+    z-index: 100;
+    bottom: 0;
+    right: 5%;
+
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+#doorbell-button.bottom_right {
+    /* Default, so doesn't need any extra styles */
+    /*bottom: 0;*/
+    /*right: 5%;*/
+}
+#doorbell-button.bottom_left {
+    bottom: 0;
+    left: 5%;
+    right: auto;
+}
+#doorbell-button.middle_right {
+    -webkit-transform: rotate(270deg) translate(50%, 0);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform: rotate(270deg) translate(50%, 0);
+    -moz-transform-origin: 100% 100%;
+    -o-transform: rotate(270deg) translate(50%, 0);
+    -o-transform-origin: 100% 100%;
+    -ms-transform: rotate(270deg) translate(50%, 0);
+    -ms-transform-origin: 100% 100%;
+    transform: rotate(270deg) translate(50%, 0);
+    transform-origin: 100% 100%;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    top: 40%;
+}
+#doorbell-button.middle_left {
+    -webkit-transform: rotate(90deg) translate(-50%, 0);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform: rotate(90deg) translate(-50%, 0);
+    -moz-transform-origin: 0 100%;
+    -o-transform: rotate(90deg) translate(-50%, 0);
+    -o-transform-origin: 0 100%;
+    -ms-transform: rotate(90deg) translate(-50%, 0);
+    -ms-transform-origin: 0 100%;
+    transform: rotate(90deg) translate(-50%, 0);
+    transform-origin: 0 100%;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    top: 40%;
+}
+#doorbell-background {
+    background: rgb(255,255,255);
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    -khtml-opacity: 0.7;
+    -moz-opacity: 0.7;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99998;
+    display: none;
+}
+#doorbell-background.dark {
+    background: rgb(0,0,0);
+}
+#doorbell {
+    position: absolute;
+    z-index: 99999;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    top: 100px;
+}
+#doorbell.doorbell-inline {
+    position: relative;
+    z-index: 0;
+    left: auto;
+    width: auto;
+    margin: 0;
+    top: auto;
+}
+#doorbell-container {
+    margin: 0 auto;
+    position: relative;
+}
+#doorbell.doorbell-inline #doorbell-container {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#doorbell-container .close {
+    position: absolute;
+    z-index: 1;
+    top: 14px;
+    right: 20px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+    min-width: inherit;
+}
+#doorbell.doorbell-inline #doorbell-container .close {
+    display: none;
+}
+#doorbell-container .close:before,
+#doorbell-container .close:after {
+    content: '';
+}
+#doorbell form {
+    padding: 10px 20px 15px;
+    background: #FFF;
+    margin: 0;
+    border: 1px solid #FAFAFA;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -moz-box-shadow: 5px 5px 5px 0 #888;
+    -webkit-box-shadow: 5px 5px 5px 0 #888;
+    box-shadow: 5px 5px 5px 0 #888;
+}
+#doorbell.doorbell-inline form {
+    padding: 0;
+    background: none;
+    margin: 0;
+    border: 0;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#doorbell form.dark {
+    -moz-box-shadow: 5px 5px 5px 0 #555;
+    -webkit-box-shadow: 5px 5px 5px 0 #555;
+    box-shadow: 5px 5px 5px 0 #555;
+}
+#doorbell.doorbell-inline form.dark {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#doorbell form fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+#doorbell form legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 21px;
+    line-height: 1.428571429;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+#doorbell #doorbell-success, #doorbell #doorbell-error {
+    display: none;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#doorbell form textarea {
+    height: 80px;
+    resize: vertical;
+}
+#doorbell form textarea, #doorbell form input[type="email"] {
+    width: 95.5%;
+    padding: 4px 2%;
+    margin-bottom: 10px;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+#doorbell #doorbell-attach-screenshot-wrapper {
+    margin-top: 0;
+    position: static;
+}
+#doorbell #doorbell-attach-screenshot-label {
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 12px;
+}
+#doorbell .buttons button {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    cursor: pointer;
+}
+#doorbell #doorbell-powered-by {
+    margin-top: 5px;
+    font-size: 11px;
+    display: inline-block;
+}
+#doorbell #doorbell-powered-by:hover {
+    text-decoration: underline;
+}
+#doorbell #doorbell-add-attachments {
+    margin-bottom: 10px;
+}
+
+#doorbell #doorbell-add-attachments.has-label-button {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#doorbell #doorbell-add-attachments-label-button {
+    font-weight: normal;
+    border: 1px solid #ccc;
+    display: block;
+    width: 96%;
+    color: #999;
+    padding: 6px 2%;
+    margin-bottom: 10px;
+    cursor: pointer; /* "hand" cursor */
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#doorbell #doorbell-add-attachments-label-button span {
+    display: block;
+    padding-left: 18px;
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#doorbell #doorbell-add-attachments-label-button img {
+    height: 14px;
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+#doorbell #doorbell-add-attachments-label-button * {
+    pointer-events: none;
+}
+
+#doorbell #doorbell-add-attachments-label-button:hover {
+    color: #333;
+}
+
+#doorbell .captcha-container {
+    margin-bottom: 10px;
+}
+
+#doorbell .captcha-container > div {
+    margin: 0 auto;
+}
+
+@media (max-width: 520px) {
+
+    #doorbell {
+        left: 10%;
+        width: 80%;
+        margin-left: 0;
+    }
+
+
+}
